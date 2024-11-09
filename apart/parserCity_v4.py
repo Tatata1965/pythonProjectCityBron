@@ -41,6 +41,7 @@ def parse_apartment(card):
                                                                                                        class_='price').find_all(
         'span')[1].text
     price = "".join(price_text.split('\xa0'))[:-1]
+    # вставили: если нет цены - устанаввливаем 0 defualt
     if price == '':
         price = '0'
     return Apartment(imageUrl, title, description, address, price_text, price)
