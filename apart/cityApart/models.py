@@ -17,6 +17,7 @@ class ApartPars(models.Model):
         return (f'{self.name}')
 
 
+
 class Booking(models.Model):
     id = models.AutoField(primary_key=True)
     city = models.ForeignKey(ApartPars, on_delete=models.CASCADE)
